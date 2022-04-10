@@ -66,7 +66,7 @@ function coinFlip() {
 
 app.get('/app/', (req, res) => {
     res.statusCode(200)
-    res.statusMessage('working');
+    res.statusMessage('OK');
     res.writeHead(res.statusCode, { 'Content-Type': 'text/plain' });
     res.end(res.statusCode + ' ' + res.statusMessage)});
 
