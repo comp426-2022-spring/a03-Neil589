@@ -52,7 +52,6 @@ function coinFlip() {
     return counts;
   }
 
-
   function flipACoin(_call) {
     if (_call !== "heads" && _call !=="tails"){
       // throw new Error("Error: no input.")
