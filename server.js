@@ -28,25 +28,28 @@ function coinFlip() {
 
 
   function coinFlips(flips) {
-    if (!(flips>0)){flips = 1};
-    const result = [];
-    for (let i=0;i<flips;i++){
-      result.push(Math.random() < 0.5 ? 'heads' : 'tails')
+    if (flips<0||flips==0||typeof flips==="undefined"){flips = 1};
+    const results = [];
+    for (var i = 0; i < flips; i++) {
+      results.push(coinFlip());
     }
-    return result;
+    return results;
   }
 
 
   function countFlips(array) {
-    const result = {tails: 0, heads: 0}; 
-    array.forEach(element => {
-      if (element === "heads"){
-        result.heads++} else if (element === "tails"){
-        result.tails++} else {
-          return "Error"
-        };
-    });
-    return result;
+    const counts = {
+      tails: 0,
+      heads: 0
+    };
+    array.forEach(index => {
+      if (index === 'heads') {
+        counts.heads++;
+      } else {
+        counts.tails++;
+      }
+    })
+    return counts;
   }
 
 
